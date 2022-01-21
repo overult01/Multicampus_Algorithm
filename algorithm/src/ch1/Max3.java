@@ -1,7 +1,7 @@
 package ch1;
 
 import java.util.Scanner;
-
+// 입력받은 숫자에서 최대값 찾기 
 public class Max3 {
 
 	public static void main(String[] args) {

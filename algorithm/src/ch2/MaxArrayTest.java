@@ -23,7 +23,7 @@ public class MaxArrayTest {
 			}
 		}
 
-		for(int i = 1; i < data.length; i++) { // 이 반복문은 length -1 만큼 반복한다. 
+		for(int i = 1; i < data.length; i++) { 
 			if(data[i] > max) {
 				max = data[i];
 				System.out.println("max 변경값 = " + max);
@@ -39,7 +39,7 @@ public class MaxArrayTest {
 		Scanner stdIn = new Scanner(System.in);
 		System.out.println("숫자 개수 = "); // 5개 
 		int count = stdIn.nextInt();
-		stdIn.nextLine(); // 아래의 println의 엔터를 위해
+		stdIn.nextLine(); // 아래 println의 엔터를 위해
 		
 		System.out.println("최대값을 찾을 숫자들 = "); //(println:엔터1) 1 5 67 18 88 (엔터2)
 		String line = stdIn.nextLine(); //nextLine(): 엔터가 나올 때까지 한 줄을 읽어온다.

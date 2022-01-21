@@ -44,7 +44,7 @@ public class ReverseArrayTest {
 		Scanner stdIn = new Scanner(System.in);
 		System.out.println("숫자 개수 = "); // 5개 
 		int count = stdIn.nextInt();
-		stdIn.nextLine(); // 아래의 println의 엔터를 위해
+		stdIn.nextLine(); // 아래 println의 엔터를 위해
 		
 		System.out.println("역순으로 찾을 숫자들 = "); //(println:엔터1) 1 5 67 18 88 (엔터2)
 		String line = stdIn.nextLine(); //nextLine(): 엔터가 나올 때까지 한 줄을 읽어온다.
@@ -58,7 +58,7 @@ public class ReverseArrayTest {
 			numInt[i] = Integer.parseInt(number[i]);
 		}
 		
-		// 역순으로 정렬하기 
+		// 역순으로 정렬 
 		reverse(numInt);
 		
 		// call by value: 기본형 + 참조형 매개변수 전달할 때.

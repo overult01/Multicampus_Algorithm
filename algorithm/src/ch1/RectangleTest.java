@@ -95,11 +95,6 @@ public class RectangleTest {
 				// line = 2, i = 1..2 
 				System.out.print(" ");
 			}
-//			for (int i = width; i >= line; i--) {
-//				// line = 1, i = 5...1
-//				// line = 2, i = 1...4 
-//				System.out.print(i - line + 1);
-//			}
 			
 			for (int i = width; i >= line; i--) {
 				System.out.print((char)su++);

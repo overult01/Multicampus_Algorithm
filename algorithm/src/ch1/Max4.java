@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Max4 {
 	static int max(int a, int b, int c, int d) {
-		// 4개 매개변수 중에서 최대값 리턴
+		// 매개변수 중에서 최대값 리턴
 		int max = a; // 기준값
 		System.out.println("max 초기값 = " + max);
 		
