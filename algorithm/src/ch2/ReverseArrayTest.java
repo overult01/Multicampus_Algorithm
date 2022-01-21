@@ -8,34 +8,34 @@ import java.util.Scanner;
 // 3. 즉 교환 횟수는 버림(length/2).
 // 주의 ) 값 교환할 때 임시 저장 변수 만들기 주의.
 public class ReverseArrayTest {
-	static int max(int[] data) {
+	static void reverse(int[] data) {
 		// 어떤 변수들을 키보드로 입력받았는지 확인. 지정한 숫자가 넘어가면 안받는다. 
 		System.out.println("===max메서드 내부===");
 		for(int i = 0; i < data.length; i++) { // 이 반복문은 length -1 만큼 반복한다. 
 			System.out.println("data[" + i + "]=" + data[i]);
 		}
 		
+		System.out.println();
 		
+		// 원래 배열을 역순으로 뒤집기.
+//		for (int i = 0; i < data.length/2; i++) { // 5개를 넣었을 때, 5/2 = 2(자바에서는 정수/정수=정수) 
+//			int temp = data[i];  // 데이터 맞교환시 임시 저장 변수;
+//			data[i] = data[data.length -i -1]; // 0번 인덱스 자리에 마지막값 [length -1 ] 넣음.
+//			data[data.length - i - 1] = temp;  // 배열의 마지막자리에 0번 인덱스 복사.		
+//		}
 		
-		// max 초기값 세팅
-		int max = data[0];
-		System.out.println("max 최초값= " + max);
-		// data 배열 중에서 최대값 리턴		
-		for(int i = 1; i < data.length; i++) { // 이 반복문은 length -1 만큼 반복한다. 
-			if(data[i] > max) {
-				max = data[i];
-				System.out.println("max 변경값 = " + max);
-			}
-		}
-
-		for(int i = 1; i < data.length; i++) { // 이 반복문은 length -1 만큼 반복한다. 
-			if(data[i] > max) {
-				max = data[i];
-				System.out.println("max 변경값 = " + max);
-			}
+		for(int i = 0; i < data.length/2; i++) {
+			new ReverseArrayTest().swap(data, i, data.length - i - 1);
 		}
 		
-		return max;
+//		return data;  --> call by value 매개변수가 바뀌었으므로 메인에서도 그 바뀐 데이터의 주소값을 전달받아 같은 내용이 출력된다. 
+//		return 다른배열;  // 만약 메서드 결과로 다른 배열을 리턴해야 하면 리턴 필수.
+	}
+	
+	void swap(int [] arr, int i, int j) {  // arr 배열 매개변수 전달 변경되면 호출된 메서드 변경 내용을 반영.
+		int temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
 	}
 	
 	
@@ -59,8 +59,7 @@ public class ReverseArrayTest {
 		}
 		
 		// 역순으로 정렬하기 
-		int result = max(numInt);
-		System.out.println("==최대값 : " + result + "==");
+		reverse(numInt);
 		
 		// call by value: 기본형 + 참조형 매개변수 전달할 때.
 		// 참조형 주소값을 복사해서 전달하면 data, numInt가 같은 주소의 동일 배열 객체를 참조하게 된다. 
