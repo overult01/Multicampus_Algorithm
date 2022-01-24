@@ -1,5 +1,7 @@
 package ch2;
 //다차원 배열
+// 2차원 배열
+// int[][] many = {{1, 5}, {2,8}, {10, 1}}
 // 재확인 필요.
 public class LeafYearTest {
 
