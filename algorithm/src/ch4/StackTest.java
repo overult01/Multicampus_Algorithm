@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 // 스택(LIFO)
+// 푸시, 팝이 같은 통로에서 이뤄진다. 
 public class StackTest {
 
 	public static void main(String[] args) {
