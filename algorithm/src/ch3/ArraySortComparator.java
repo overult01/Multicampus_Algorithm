@@ -19,7 +19,7 @@ class MyArraySort implements Comparator<int[]> { // int[][] 배열의 정렬 기
 	@Override
 	public int compare(int[] arr1, int[] arr2) {
 		// 1차원 배열의 데이터 갯수가 작은 것부터 큰 순서대로 정렬하도록 지정.
-		if(arr1.length > arr2.length) return 1; // 뒤에 것이 더 작으므로 순서롤 바꿔야 한다.
+		if(arr1.length > arr2.length) return 1; // 뒤에 것이 더 작으므로 순서를 바꿔야 한다.
 		else if(arr1.length < arr2.length) return -1;
 		else return 0; // 같으면 0.
 	}
